@@ -14,6 +14,11 @@
     "--cap-add=NET_ADMIN",
     "--cap-add=NET_RAW"
   ],
+  "features": {
+    "ghcr.io/devcontainers/features/docker-in-docker:2": {
+      "moby": false
+    }
+  },
   "customizations": {
     "vscode": {
       "extensions": [
@@ -53,7 +58,7 @@
   },
   "workspaceMount": "source=${localWorkspaceFolder},target=/workspace,type=bind,consistency=delegated",
   "workspaceFolder": "/workspace",
-  "postStartCommand": "sudo /usr/local/bin/init-firewall.sh",
+  "postStartCommand": "sudo /usr/local/bin/init-firewall.sh && sudo /usr/local/share/docker-init.sh",
   "waitFor": "postStartCommand",
   "forwardPorts": [3000],
   "portsAttributes": {

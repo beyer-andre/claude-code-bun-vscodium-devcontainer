@@ -6,6 +6,7 @@
 - Uses [Bun](https://bun.sh/) instead of Node.js
 - Supports [VSCodium](https://github.com/VSCodium/vscodium) with [DevPod Containers extension](https://github.com/3timeslazy/vscodium-devpodcontainers)
 - Works with [DevPod CLI](https://devpod.sh/docs/getting-started/install#install-devpod-cli)
+- Docker-in-Docker [feature](https://github.com/devcontainers/features/tree/main/src/docker-in-docker) integrated
 - Default zsh, tmux installed
 - Forwarded container port 3000
 

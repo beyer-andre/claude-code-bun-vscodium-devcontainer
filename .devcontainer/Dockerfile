@@ -91,5 +91,6 @@ COPY init-firewall.sh /usr/local/bin/
 USER root
 RUN chmod +x /usr/local/bin/init-firewall.sh && \
   echo "bun ALL=(root) NOPASSWD: /usr/local/bin/init-firewall.sh" > /etc/sudoers.d/bun-firewall && \
-  chmod 0440 /etc/sudoers.d/bun-firewall
+  echo "bun ALL=(root) NOPASSWD: /usr/local/share/docker-init.sh" > /etc/sudoers.d/docker-in-docker && \
+  chmod 0440 /etc/sudoers.d/bun-firewall /etc/sudoers.d/docker-in-docker
 USER bun
