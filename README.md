@@ -1,8 +1,9 @@
-# Bun based Claude Code devcontainer for VSCodium 
+# Bun based Claude Code and OpenCode devcontainer for VSCodium 
 
 ## Features
 
 - Based on the [Claude Code development container reference implementation](https://github.com/anthropics/claude-code/tree/main/.devcontainer)
+- Includes [OpenCode](https://github.com/anomalyco/opencode)
 - Uses [Bun](https://bun.sh/) instead of Node.js
 - Supports [VSCodium](https://github.com/VSCodium/vscodium) with [DevPod Containers extension](https://github.com/3timeslazy/vscodium-devpodcontainers)
 - Works with [DevPod CLI](https://devpod.sh/docs/getting-started/install#install-devpod-cli)
@@ -36,9 +37,9 @@
    devpod ide use codium
    ```
 
-3. Create bind-mounted .claude-devcontainer directory
+3. Create bind-mounted configuration directories for Claude Code and OpenCode
    ```bash
-   mkdir ~/.claude-devcontainer
+   mkdir ~/.claude-devcontainer && mkdir ~/.opencode-devcontainer
    ```
 
 4. Copy the .devcontainer folder into your project
@@ -57,8 +58,9 @@ devpod up . --ide none
 # SSH into the devcontainer
 ssh my-project.devpod
 
-# Run claude inside devcontainer
+# Run agents inside devcontainer
 #claude --dangerously-skip-permissions
+#opencode
 
 # Delete devcontainer
 devpod delete my-project

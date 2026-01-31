@@ -85,6 +85,9 @@ RUN sh -c "$(wget -O- https://github.com/deluan/zsh-in-docker/releases/download/
 RUN curl -fsSL https://claude.ai/install.sh | bash -s $CLAUDE_CODE_VERSION \
   && echo 'export PATH="$HOME/.local/bin:$PATH"' >> ~/.zshrc
 
+# Install OpenCode
+RUN curl -fsSL https://opencode.ai/install | bash
+
 
 # Copy and set up firewall script
 COPY init-firewall.sh /usr/local/bin/

@@ -77,7 +77,8 @@ for domain in \
     "auth.docker.io" \
     "cdn.auth0.com" \
     "auth.docker.com" \
-    "login.docker.com"; do
+    "login.docker.com" \
+    "models.dev"; do
     echo "Resolving $domain..."
     ips=$(dig +noall +answer A "$domain" | awk '$4 == "A" {print $5}')
     if [ -z "$ips" ]; then
