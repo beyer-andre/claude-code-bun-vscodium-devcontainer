@@ -23,6 +23,8 @@
     "vscode": {
       "extensions": [
         "anthropic.claude-code",
+        "sst-dev.opencode",
+        "oven.bun-vscode",
         "dbaeumer.vscode-eslint",
         "esbenp.prettier-vscode",
         "eamodio.gitlens"
