@@ -78,7 +78,26 @@ for domain in \
     "cdn.auth0.com" \
     "auth.docker.com" \
     "login.docker.com" \
-    "models.dev"; do
+    "models.dev" \
+    "ollama.com" \
+    "api.openai.com" \
+    "api.deepseek.com" \
+    "api.opencode.ai" \
+    "api.minimax.io" \
+    "api.z.ai" \
+    "api.mistral.ai" \
+    "openrouter.ai" \
+    "ai-gateway.vercel.sh" \
+    "ai-gateway.helicone.ai" \
+    "api.githubcopilot.com" \
+    "api.cerebras.ai" \
+    "api.x.ai" \
+    "api.deepinfra.com" \
+    "generativelanguage.googleapis.com" \
+    "vertexai.googleapis.com" \
+    "api.cohere.com" \
+    "api.groq.com" \
+    "api.perplexity.ai; do
     echo "Resolving $domain..."
     ips=$(dig +noall +answer A "$domain" | awk '$4 == "A" {print $5}')
     if [ -z "$ips" ]; then
